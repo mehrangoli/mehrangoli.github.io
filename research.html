@@ -9,6 +9,11 @@
 	<link href='css/custom.css' rel='stylesheet'>
 	<script src='https://use.fontawesome.com/02858a71b6.js'></script>
 	<link href='css/lstools.css' rel='stylesheet'>
+	<style>
+	.div1 {
+  	float: left;
+	}
+	</style>
 </head>
 	
 	
@@ -28,17 +33,17 @@
 		<li class= active role='presentation'>
 			<a href='research.html'>
 				<i aria-hidden='true' class='fa fa-graduation-cap'></i>
-				<div class='text'>Research Interest</div>
+				<div class='text'>Research Interests</div>
 			</a>
 		</li>
-		<li role='presentation'>
+		<!--<li role='presentation'>
 			<a href='teaching.html'>
 				<i aria-hidden='true' class='fa fa-users'></i>
 				<div class='text'>Teaching
 				</div>
 			</a>
 		</li>
-		<li role='presentation'>
+		--><li role='presentation'>
 			<a href='publications.html'>
 				<i aria-hidden='true' class='fa fa-book fa-fw'></i>
 				<div class='text'>Publications</div>
@@ -59,9 +64,9 @@
 		<p class='lead'>Researcher, DFKI, Bremen, Germany</p>
 	</div>	
 	
-	<div class='col-md-2' style="float:none;margin:auto;">
+	<div class='col-md-2.5' style="float:none;margin:auto;">
 	<br>	
-	<h4 style='margin-top: 0px'>Contact</h4>
+	<h3 style='margin-top: 0px'>Contact</h3>
 	Cyber-Physical Systems
 	<br>
 	Bibliothekstraße 5 (MZH)
@@ -95,23 +100,110 @@
 	</div>			
 		
 	</div>
-	</div>	
+	</div>		
 	
 	
 	<br>	
 	<br>	
-	<br>	
+	<br>
 	<div class='row' id='main-row'>
 	<div class='col-md-8' style="float:none;margin:auto;">
-	<div class="list-group">
-  <a class="list-group-item" href="#"><i class="fa-li fa fa-square" aria-hidden="true"></i>&nbsp; System-level Design</a>
-  <a class="list-group-item" href="#"><i class="fa-li fa fa-square" aria-hidden="true"></i>&nbsp; Formal and Simulation-based Verification</a>
-  <a class="list-group-item" href="#"><i class="fa-li fa fa-square" aria-hidden="true"></i>&nbsp; Security Validation</a>
-  <a class="list-group-item" href="#"><i class="fa-li fa fa-square" aria-hidden="true"></i>&nbsp; Machin Learning Techniques</a>
-  <a class="list-group-item" href="#"><i class="fa-li fa fa-square" aria-hidden="true"></i>&nbsp; Approximate Computing</a>
+	<div class="list-group" align="justify">
+	<a class="list-group-item"><i aria-hidden="true"></i>&nbsp;
+		<p> <img src="image/Analysis.svg" align="left" alt="ESL" style="width:150px;height:150px;margin-right:15px;margin-top:-15px;">
+		<font size="4"><b>System-level Design and Analysis:</b></font> Hardware complexity nowadays is an issue. Modern electronic circuits and systems consist of many different functional blocks including multiple (third party) <b>Intellectual Property (IP)</b> cores, various on-chip interconnects and memories. One possible solution to handle the electronic circuits complexity is to raise the
+level of abstraction towards the <b>Electronic System Level (ESL)</b>. The academic
+and research communities have developed the ESL paradigm over the last decade to
+provide designers with new design methodologies, tools, and specific system design
+languages. By this mean, a system can be prototyped quickly and used as a reference
+model for lower levels of abstraction. Moreover, it provides designers with testing
+or evaluating the software parts of an embedded system before the actual hardware
+is manufactured. Although SystemC-based VPs reduce the complexity of modeling and simulation
+of SoC designs at the ESL, these are not the only steps for which a SystemC <b>Virtual Prototype</b> (VP)
+is implemented and used. Designers of such models may
+want to test new features and validate the capabilities of SoCs, i.e. to decide where
+to reuse existing IPs or add new (third-party) hardware blocks, perform design space exploration for the next generation of SoCs, and etc. To handle each of the aforementioned tasks, accurate knowledge about the VP
+including both structure and behavior is necessarily required. This initial step
+in the design process considered as the <b>Design Understanding</b> phase i.e. Analyzing
+a given SystemC VP in order to know the respective components of the design
+(e.g. structure) as well as their relation to each other (e.g. behavior). We proposed two novel SystemC-based VP analysis approaches,
+enabling designers to analyze a given VP from two perspectives: the debugger-based (Using GNU Debugger)
+and the compiler-based (using Clag) approaches.</p>
+	</a>
+	<br>
+	<a class="list-group-item">&nbsp;
+		<p> <img src="image/verif.svg" align="left" alt="ESL" style="width:150px;height:150px;margin-right:15px;margin-top:-15px;">
+		<font size="4"><b>Formal and Simulation-based Verification</b>:</font>
+Nowadays, digital systems have become pervasive in everyday
+lives. At the same time, they are increasingly used in cost-critical and life-critical
+applications, e.g. in the automotive or in the medical
+sectors. This has led to a extremely heightened importance of design correctness
+of these systems.			
+The much earlier availability and the significantly faster simulation speed of <b>Virtual Prototypes</b> (VPs)
+in comparison to the Register Transfer Level (RTL) hardware models are the main
+reasons that VP used as a reference model for an early system verification in the
+design process. Hence, ensuring the correctness of VPs is of the utmost importance,
+as undetected faults may propagate to lower levels of abstraction and become very
+costly to fix. 
+We propose a set of simulation-based and semi-formal (using model checker) verification approaches which automatically
+validates a given SystemC VP against both the TLM-2.0 rules and its specifications</p>		
+	</a>
+	<br>
+	<a class="list-group-item" >&nbsp;
+		<p> <img src="image/security.svg" align="left" alt="ESL" style="width:150px;height:150px;margin-right:15px;margin-top:-15px;">
+		<font size="4"><b>Security Validation</b>:</font> Modern System-on-Chips (SoCs) are notoriously
+insecure. Hence, the fundamental security feature of IP
+isolation is heavily used, e. g., secured Memory Mapped
+IOs (MMIOs), or secured address ranges in case of memories,
+are marked as non-accessible. One way to provide
+strong assurance of security is to define isolation as information
+flow policy in hardware using the notion of noninterference.
+Since, an insecure hardware opens up the
+door for attacks across the entire system stack (from software
+down to hardware), the security validation process
+should start as early as possible in the SoC design cycle,
+i. e. at the Electronic System Level (ESL). We propose the first dynamic information flow analysis
+at the ESL. Our approach allows to validate the run-time
+behavior of a given SoC implemented using Virtual Prototypes
+(VPs) against security threat models, such as information
+leakage (confidentiality) and unauthorized access
+to data in a memory (integrity).</p>	  
+	</a>
+	<br>	
+	<a class="list-group-item" >&nbsp;
+		<p> <img src="image/machin learning.png" align="left" alt="ESL" style="width:150px;height:150px;margin-right:15px;margin-top:-15px;">
+		<font size="4"><b>Machin Learning Techniques</b>:</font> Machin Learning provides systems the ability to automatically learn and improve from experience without being explicitly programmed. It focuses on the development of computer programs that can access data and use it learn for themselves. We aim to utilize the machine learning techniqes for different aspects of CAD and electronic system design. We integrate a combination of static and dynamic methods
+(hybrid analysis) with machine learning techniques (e.g. regression analysis) to evaluate the erorr-resilience portions of a given design. The hybrid analysis is
+used to extract the simulation behavior of different design's portions. Then, machine learning techniques are applied to the extracted behavior of each portion in order to find a real approximated
+model (with negligible error). The original part is replaced with its corresponding estimated model to
+evaluate its impact on the final output of the design.</p>	  
+	</a>
+	<br>	
+	<a class="list-group-item" >&nbsp;
+		<p> <img src="image/approx.png" align="left" alt="ESL" style="width:150px;height:150px;margin-right:15px;margin-top:-15px;">
+		<font size="4"><b>Approximate Computing</b>:</font> The increasing functionality of electronic systems due to the constant evolution of the
+market requirements makes the non-functional aspects of such systems (e.g. power, area or perfor-
+mance) a major concern in the design process. Approximate computing is a promising way to opti-
+mize these criteria by trading accuracy within acceptable limits. Since applying significant structural
+changes to a given design is very expensive and increases with the stage of development, the opti-
+mization solution needs to be incorporated into the design as early as possible. For the early design
+entry, modeling hardware at the Electronic System Level (ESL) design using the SystemC language
+is nowadays widely used in the industry. In order to apply approximation techniques to optimize
+a given SystemC design, designers need to know which parts of the design can be approximated.
+However, identifying these parts is a crucial and non-trivial starting point of approximate computing
+as the incorrect detection of even one critical part as resilient may result in an unacceptable output.
+This usually requires a large programming effort by designers, especially when exploring the design
+space manually. We aim to automatically identify the approximable portions of a given SystemC
+design, that can in turn, be realized and mapped onto the approximate implementations by designers
+in the later design steps.</p> 	  
+	</a>		
 </div>
-	</div>
-	</div>
+<br>
+<br>
+		<br>
+		<br>
+</div>
+</div>
 	
 	
 </body>
