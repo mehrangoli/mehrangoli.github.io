@@ -111,7 +111,7 @@
 	<div class="list-group" align="justify">
 	<a class="list-group-item"><i aria-hidden="true"></i>&nbsp;
 		<p> <img src="image/Analysis.svg" align="left" alt="ESL" style="width:150px;height:150px;margin-right:15px;margin-top:-15px;">
-		<font size="4"><b>System-level Design and Analysis:</b></font> Hardware complexity nowadays is an issue. Modern electronic circuits and systems consist of many different functional blocks including multiple (third party) <b>Intellectual Property (IP)</b> cores, various on-chip interconnects and memories. One possible solution to handle the electronic circuits complexity is to raise the
+		<font size="4"><b>System-level Design and Analysis:</b></font> Hardware complexity nowadays is an issue. Modern electronic circuits and systems consist of many different functional blocks including multiple (third party) <b>Intellectual Property (IP)</b> cores, various on-chip interconnects and memories. One possible solution to handle the complexity of the electronic circuits is to raise the
 level of abstraction towards the <b>Electronic System Level (ESL)</b>. The academic
 and research communities have developed the ESL paradigm over the last decade to
 provide designers with new design methodologies, tools, and specific system design
@@ -122,10 +122,10 @@ is manufactured. Although SystemC-based VPs reduce the complexity of modeling an
 of SoC designs at the ESL, these are not the only steps for which a SystemC <b>Virtual Prototype</b> (VP)
 is implemented and used. Designers of such models may
 want to test new features and validate the capabilities of SoCs, i.e. to decide where
-to reuse existing IPs or add new (third-party) hardware blocks, perform design space exploration for the next generation of SoCs, and etc. To handle each of the aforementioned tasks, accurate knowledge about the VP
+to reuse existing IPs or add new (third-party) hardware blocks, perform design space exploration for the next generation of SoCs, etc. To handle each of the aforementioned tasks, accurate knowledge about the VP
 including both structure and behavior is necessarily required. This initial step
 in the design process considered as the <b>Design Understanding</b> phase i.e. Analyzing
-a given SystemC VP in order to know the respective components of the design
+a given SystemC VP to know the respective components of the design
 (e.g. structure) as well as their relation to each other (e.g. behavior). We propose two novel SystemC-based VP analysis approaches,
 enabling designers to analyze a given VP from two perspectives: the debugger-based (Using GNU Debugger)
 and the compiler-based (using Clang) approaches.</p>
@@ -137,7 +137,7 @@ and the compiler-based (using Clang) approaches.</p>
 Nowadays, digital systems have become pervasive in everyday
 lives. At the same time, they are increasingly used in cost-critical and life-critical
 applications, e.g. in the automotive or in the medical
-sectors. This has led to an extremely heightened importance of design correctness
+sectors. This has led to the extremely heightened importance of design correctness
 of these systems.			
 The much earlier availability and the significantly faster simulation speed of <b>Virtual Prototypes</b> (VPs)
 in comparison to the Register Transfer Level (RTL) hardware models are the main
@@ -156,14 +156,14 @@ insecure. Hence, the fundamental security feature of IP
 isolation is heavily used, e.g., secured Memory Mapped
 IOs (MMIOs), or secured address ranges in case of memories,
 are marked as non-accessible. One way to provide
-strong assurance of security is to define isolation as information
+strong assurance of security is to define isolation as an information
 flow policy in hardware using the notion of noninterference.
-Since, an insecure hardware opens up the
+Since insecure hardware opens up the
 door for attacks across the entire system stack (from software
 down to hardware), the security validation process
 should start as early as possible in the SoC design cycle,
 i.e. at the Electronic System Level (ESL). We propose the first dynamic information flow analysis
-at the ESL. Our approach allows to validate the run-time
+at the ESL. Our approach allows validating the run-time
 behavior of a given SoC implemented using Virtual Prototypes
 (VPs) against security threat models, such as information
 leakage (confidentiality) and unauthorized access
@@ -172,9 +172,9 @@ to data in a memory (integrity).</p>
 	<br>	
 	<a class="list-group-item" >&nbsp;
 		<p> <img src="image/machin learning.png" align="left" alt="ESL" style="width:150px;height:150px;margin-right:15px;margin-top:-15px;">
-		<font size="4"><b>Machin Learning Techniques</b>:</font> Machin Learning provides systems the ability to automatically learn and improve from experience without being explicitly programmed. It focuses on the development of computer programs that can access data and use it learn for themselves. We aim to utilize the machine learning techniqes for different aspects of CAD and electronic system design. We integrate a combination of static and dynamic methods
-(hybrid analysis) with machine learning techniques (e.g. regression analysis) to evaluate the erorr-resilience portions of a given design. The hybrid analysis is
-used to extract the simulation behavior of different design's portions. Then, machine learning techniques are applied to the extracted behavior of each portion in order to find a real approximated
+		<font size="4"><b>Machin Learning Techniques</b>:</font> Machin Learning provides systems the ability to automatically learn and improve from experience without being explicitly programmed. It focuses on the development of computer programs that can access data and use it to learn for themselves. We aim to utilize machine learning techniques for different aspects of CAD and electronic system design. We integrate a combination of static and dynamic methods
+(hybrid analysis) with machine learning techniques (e.g. regression analysis) to evaluate the error-resilience portions of a given design. The hybrid analysis is
+used to extract the simulation behavior of different design's portions. Then, machine learning techniques are applied to the extracted behavior of each portion to find a real approximated
 model (with negligible error). The original part is replaced with its corresponding estimated model to
 evaluate its impact on the final output of the design.</p>	  
 	</a>
@@ -194,7 +194,7 @@ However, identifying these parts is a crucial and non-trivial starting point of 
 as the incorrect detection of even one critical part as resilient may result in an unacceptable output.
 This usually requires a large programming effort by designers, especially when exploring the design
 space manually. We aim to automatically identify the approximable portions of a given SystemC
-design, that can in turn, be realized and mapped onto the approximate implementations by designers
+design, that can, in turn, be realized and mapped onto the approximate implementations by designers
 in the later design steps.</p> 	  
 	</a>		
 </div>
